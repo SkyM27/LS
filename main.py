@@ -21,7 +21,7 @@ clf = None
 
 @app.on_event("startup")
 def load_train_model():
-    df = pd.read_csv("./iris_cleaned.csv")
+    df = pd.read_csv("./iris_ok.csv")
     X, y = df[[column for column in df.columns if column not in ["variety", "variety_encoded", "X", "Y"]]], df["Y"]
 
     global knn
